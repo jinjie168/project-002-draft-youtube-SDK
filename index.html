@@ -1654,7 +1654,7 @@ $('bAdv').onclick=()=>startGame('adventure');
 $('bCla').onclick=()=>startGame('classic');
 $('bAch').onclick=()=>{Snd.init();Snd.click();renderAch();$('ac').style.display='flex';showStarPopup();};
 $('acBack').onclick=()=>{Snd.click();$('ac').style.display='none';};
-function goHome(){CG.play(false);const hc=document.documentElement.classList;hc.add('onhome');hc.remove('mAdv');hc.remove('mCla');sessReset();CV.run(false);clearTimeout(timer);retry=false;$('ov').style.display='none';$('pm').style.display='none';$('st').style.display='none';$('ac').style.display='none';$('sp').style.display='none';$('sc').style.display='none';$('game').style.display='none';$('homeScreen').style.display='flex';refreshHome();}
+function goHome(){CG.play(false);const hc=document.documentElement.classList;hc.add('onhome');hc.remove('mAdv');hc.remove('mCla');sessReset();CV.run(false);clearTimeout(timer);retry=false;$('ov').style.display='none';$('pm').style.display='none';$('st').style.display='none';$('ac').style.display='none';$('sp').style.display='none';$('game').style.display='none';$('homeScreen').style.display='flex';refreshHome();}
 function updatePm(){$('pmSfx').classList.toggle('off',!Snd.sfxOn);$('pmMusic').classList.toggle('off',!Snd.musicOn);}
 function qMode(){let m='auto';try{m=LS.get('fruitLines.qmode')||'auto';}catch(e){}return m;}
 function updateQ(){const m=qMode();document.querySelectorAll('#pmQ .qchip').forEach(b=>b.classList.toggle('on',b.dataset.m===m));$('pmQ').style.display=CV.on?'flex':'none';}
